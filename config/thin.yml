@@ -1,11 +1,12 @@
 ---
-chdir: /home/ubuntu/discourse
+chdir: /home/ubuntu/discourse/current
 environment: production
 address: 0.0.0.0
 port: 3000
 timeout: 30
-log: log/thin.log
-pid: tmp/pids/thin.pid
+log: /home/ubuntu/discourse/shared/log/thin.log
+pid: /home/ubuntu/discourse/shared/pids/thin.pid
+socket: /home/ubuntu/discourse/shared/sockets/thin.sock
 max_conns: 1024
 max_persistent_conns: 100
 require: []
