@@ -70,6 +70,9 @@ gem 'thin', require: false
 gem 'diffy', require: false
 gem 'highline', require: false
 
+gem 'capistrano', require: false
+gem 'capistrano-rbenv', require: false
+
 # Gem that enables support for plugins. It is required.
 gem 'discourse_plugin', path: 'vendor/gems/discourse_plugin'
 
