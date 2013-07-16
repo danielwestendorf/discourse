@@ -61,5 +61,8 @@ Discourse::Application.configure do
   # Discourse strongly recommend you use a CDN.
   # For origin pull cdns all you need to do is register an account and configure
   # config.action_controller.asset_host = "http://YOUR_CDN_HERE"
+  config.middleware.insert_after(::Rack::Runtime, "::Rack::Auth::Basic", "SimplyBuilt") do |u, p|
+      [u, p] == ['simplybuilt', 'password']
+  end
 
 end
